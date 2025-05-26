@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    
+    <student>
+        <id>3</id>
+        <name>Fiona Gabrielle Medina</name>
+        <course>BSIT</course>
+        <photo>fio.jpg</photo>
+    </student>
+    <student>
+        <id>1</id>
+        <name>John Patrick Dela Cruz</name>
+        <course>BSIT</course>
+        <photo>1.jpg</photo>
+    </student>
+<student><id>4</id><name>Reiner Eusebio</name><course>BSIT</course><photo>rei.jpg</photo></student></students>

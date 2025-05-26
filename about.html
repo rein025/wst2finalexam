@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: #eef2f7; color: #333; }
+    .container { padding:80px 20px 20px; max-width:900px; margin:0 auto; text-align: center; }
+    .menu-bar { position: fixed; top: 0; left: 0; right: 0; height: 60px;
+      background: linear-gradient(90deg,#fd7251,#fdb65a); display: flex; align-items: center;
+      justify-content: space-between; padding: 0 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 1000;
+    }
+    .menu-bar .logo { color: #fff; font-size: 1.6em; font-weight: bold; letter-spacing: 1px; transition: opacity .3s; }
+    .menu-bar nav a { color:rgba(255,255,255,0.9); text-decoration:none; margin-left:25px; position:relative; transition:transform .3s, color .3s; }
+    .menu-bar nav a::after { content:''; position:absolute; bottom:-4px; left:0; right:0; height:2px; background:#fff; transform:scaleX(0); transform-origin:left; transition:transform .3s; }
+    .menu-bar nav a:hover { color:#fff; transform:translateY(-2px); }
+    .menu-bar nav a:hover::after { transform:scaleX(1); }
+
+    .hero { padding-top: 80px; text-align: center; background: #fff; padding-bottom: 40px; }
+    .hero h1 { margin: 0; font-size: 2.5em; }
+
+    .team { display: flex; flex-wrap: wrap; justify-content: center; gap: 50px; padding: 40px 20px; }
+    .member {
+      background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      width: 270px; height: 270px; text-align: center; padding: 30px;
+      transition: transform .3s ease, background .3s ease;
+    }
+    .member:hover {
+      transform: translateY(-5px);
+      background: #a048f2;
+    }
+    .member:hover h3,
+    .member:hover p {
+      color: #fff;
+    }
+
+    .member img { width: 170px; height: 170px; border-radius: 50%; object-fit: cover; }
+    .member h3 { margin: 28px 0 5px; color: #333; transition: color .3s ease; }
+    .member p { margin: 0; color: #666; transition: color .3s ease; }
+  </style>
+</head>
+<body>
+  <div class="menu-bar">
+    <div class="logo" id="logoText">Web Systems and Technologies II</div>
+    <nav>
+      <a href="index.php">Home</a>
+      <a href="about.html">About</a>
+      <a href="login.php">Logout</a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <h1>About Us</h1>
+  </div>
+
+  <div class="team">
+    <div class="member">
+      <img src="rei.jpg" alt="Reiner">
+      <h3>Reiner Kirsten C. Eusebio</h3>
+      <p>BSIT 3B - G2</p>
+    </div>
+    <div class="member">
+      <img src="fio.jpg" alt="Fiona">
+      <h3>Fiona Gabrielle V. Medina</h3>
+      <p>BSIT 3B - G2</p>
+    </div>
+  </div>
+<script>
+    const logoEl = document.getElementById('logoText');
+    const texts = ['Web Systems and Technologies II', 'Eusebio, Reiner Kirsten C.', 'Medina, Fiona Gabrielle V.', 'BSIT 3B - G2'];
+    let idx = 0;
+    setInterval(() => {
+        logoEl.style.opacity = 0;
+        setTimeout(() => {
+            idx = (idx + 1) % texts.length;
+            logoEl.textContent = texts[idx];
+            logoEl.style.opacity = 1;
+        }, 500);
+    }, 10000);
+</script>
+</body>
+</html>
